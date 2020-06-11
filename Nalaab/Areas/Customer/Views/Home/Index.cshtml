@@ -1,0 +1,107 @@
+﻿@model Nalaab.Models.ViewModels.IndexVM
+
+
+
+
+
+<div class="row">
+    <div class="col-6">
+        <a class="btn btn-outline-primary active" asp-area="Customer" asp-controller="Home" asp-action="Index">الجميع</a>
+        <a class="btn btn-outline-primary" asp-area="Customer" asp-controller="Home" asp-action="IndexWithCategory" asp-route-category="رياضة">رياضة</a>
+        <a class="btn btn-outline-primary" asp-area="Customer" asp-controller="Home" asp-action="IndexWithCategory" asp-route-category="مغامرات">مغامرات</a>
+        <a class="btn btn-outline-primary" asp-area="Customer" asp-controller="Home" asp-action="IndexWithCategory" asp-route-category="قتال">قتال</a>
+        <a class="btn btn-outline-primary" asp-area="Customer" asp-controller="Home" asp-action="IndexWithCategory" asp-route-category="رعب">رعب</a>
+        <a class="btn btn-outline-primary" asp-area="Customer" asp-controller="Home" asp-action="IndexWithCategory" asp-route-category="أكشن">أكشن</a>
+        <a class="btn btn-outline-primary" asp-area="Customer" asp-controller="Home" asp-action="IndexWithCategory" asp-route-category="سيارات">سيارات</a>
+    </div>
+    <div class="col-6">
+        <div>
+            <form method="get" asp-action="Index">
+                <p>
+                    إبحث عن لعبة : <input type="text" name="SearchString" value="@ViewBag.CurrentFilter" />
+                    <input type="submit" value="بحث" class="btn btn-primary" /> |
+                    <a asp-action="Index"> إزالة البحث </a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="row text-warning">
+    <small> *ملاحظة / الموقع حاليا للتجربة فقط ولاتوجد بضاعة حقيقية </small>
+</div>
+
+
+@if (Model.Coupon.Count() > 0)
+{
+
+
+<div class="container">
+
+    <div class="row border p-1  m-2">
+        <marquee scrolldelay="70" truespeed="25" class="text-primary">
+
+            @foreach (var item in Model.Coupon.Take(2))
+            {
+
+            <span class="m-4">
+                إستخدم كود <strong>@item.Name</strong> لتحصل على خصم @item.Discount
+                @if (item.CouponType == "0")
+                {
+                    <span>%</span>
+                }
+                else
+                {
+                    <span>ريال</span>
+                }
+                للطلبات الأعلى من @item.MinimumAmount ريال
+
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+            </span>
+
+
+            }
+        </marquee>
+
+        
+    </div>
+
+    </div>
+}
+
+
+<br />
+<div class="row pb-3 backgroundWhite">
+
+
+    @foreach (var product in Model.Product)
+    {
+        <div class="col-lg-3 col-md-6">
+            <div class="row p-2">
+                <div class="col-12  p-1" style="border:1px solid #008cba; border-radius: 5px;">
+                    <div class="card" style="border:0px;">
+                        <img src="@product.ImageUrl" class="card-img-top rounded" />
+                        <div class="pl-1 mt-1">
+                            <p class="card-title h5 pt-2"><b style="color:#2c3e50">@product.Title</b></p>
+                            <p class="card-title text-info">شركة الإنتاج : <b>@product.ProductionCompany</b></p>
+                            <p class="card-title text-info"> التصنيف : <b>@product.Category.Name</b></p>
+                            <p class="card-title text-info"> الفئة العمرية : <b>+@product.AgeGroup.Name سنوات</b></p>
+                        </div>
+
+                        <div style="padding-left:5px;">
+                            <p style="color:green">السعر : <b class="">@product.Price.ToString("0.00") ريال </b></p>
+                        </div>
+                    </div>
+                    <div>
+                        <a asp-controller="Home" asp-action="Details" class="btn btn-success form-control" asp-route-id="@product.Id">
+                            أضف إلى السلة <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+

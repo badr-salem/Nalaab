@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200531204652_EditOrderHeaderModel.cs" />
+    <Compile Remove="Migrations\20200531204652_EditOrderHeaderModel.Designer.cs" />
+    <Compile Remove="Migrations\20200605201743_addValidationToOrderHeaders.cs" />
+    <Compile Remove="Migrations\20200605201743_addValidationToOrderHeaders.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nalaab.Models\Nalaab.Models.csproj" />
+    <ProjectReference Include="..\Nalaab.Utility\Nalaab.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

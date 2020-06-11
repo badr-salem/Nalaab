@@ -1,0 +1,131 @@
+﻿@model Nalaab.Models.ViewModels.ShoppingCartVM
+
+<form method="post">
+    @if (Model.ListCart.Count > 0)
+    {
+        <br />
+        <input id="userId" asp-for="ListCart[0].ApplicationUserId" hidden />
+        <div class="backgroundWhiteBorder">
+            <div class="container">
+                <div class="card">
+                    <div class="card-header bg-dark text-light ml-0 row container">
+                        <div class="col-6">
+                            سلة التسوق
+                            <i class="fa fa-shopping-cart"></i> &nbsp;
+                            
+                        </div>
+                        <div class="col-6 text-right">
+                            <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn btn-outline-info btn-sm">متابعة التسوق</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        @foreach (var item in Model.ListCart)
+                        {
+                            <div class="row">
+                                <div class="d-none d-lg-block col-lg-1 text-center py-2">
+                                    <img src="@item.Product.ImageUrl" class="rounded" width="100%" />
+                                </div>
+                                <div class="col-12 text-sm-center col-lg-6 text-lg-left">
+                                    <h5><strong>@item.Product.Title</strong></h5>
+                                    <p><small>@item.Product.Description</small></p>
+                                </div>
+                                <div class="col-12 text-sm-center col-lg-5 text-lg-right row">
+                                    <div class="col-4 text-md-right" style="padding-top:5px;">
+                                        <h6><strong>SAR @item.Price <span class="text-muted"> x </span> @item.Count </strong></h6>
+                                    </div>
+                                    <div class="col-6 col-sm-4 col-lg-6">
+                                        <div class="float-right mx-1">
+                                            <a asp-action="Plus" asp-route-cartId="@item.Id" class="btn btn-primary">
+                                                <i class="fas fa-plus"></i>
+                                            </a>
+                                        </div>
+                                        <div class="float-right mx-1">
+                                            <a asp-action="Minus" asp-route-cartId="@item.Id" class="btn btn-danger">
+                                                <i class="fas fa-minus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 col-sm-4 col-lg-2 text-right">
+
+                                        <a asp-action="Remove" asp-route-cartId="@item.Id" class="btn btn-outline-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        }
+
+                    <div class="row">
+                        <div class="col-6">
+                            
+                                
+                                    <input asp-for="OrderHeader.CouponCode" id="txtCouponCode" class="form-control" placeholder="أضف كوبون الخصم" />
+                                
+                               
+                            
+                        </div>
+                        <div class="col-4">
+                            <button type="submit" class="btn form-control btn-outline-success" id="btnCoupon" asp-action="AddCoupon">
+                                تطبيق
+                            </button>
+                            <button type="submit" class="btn  form-control btn-outline-danger" style="display:none" id="btnRemoveCoupon" asp-action="RemoveCoupon">
+                                حذف
+                            </button>
+                        </div>
+                       
+                    </div>
+
+                    <div class="row pt-4">
+                        <div class="col-10">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between bg-light">
+                                    <span class="text-info"> المجموع (SAR)</span>
+                                    <strong class="text-info"><span id="txtOrderTotal">@Model.OrderHeader.OrderTotal</span> ريال </strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                        <br />
+                       
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-6">
+                                <a asp-action="Summary" asp-area="Customer" asp-controller="Cart" class="btn btn-success form-control">الدفع أون لاين</a>
+                            </div>
+                            <div class="col-6">
+                                <a asp-action="SummaryNoPay" asp-area="Customer" asp-controller="Cart" class="btn btn-info form-control">الدفع عند الإستلام</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="backgroundWhiteBorder"> ليس لديك منتجات في سلة التسوق الخاصة بك حتى الان ...</div>
+    }
+</form>
+
+@section Scripts{
+    <script>
+        $(function () {
+            var couponCode = document.getElementById("txtCouponCode").value;
+            if (couponCode.length > 0) {
+                document.getElementById('btnCoupon').style.display = 'none';
+                document.getElementById('btnRemoveCoupon').style.display = '';
+            }
+            else {
+                document.getElementById('btnCoupon').style.display = '';
+                document.getElementById('btnRemoveCoupon').style.display = 'none';
+            }
+        });
+    </script>
+}
+
+
+
+

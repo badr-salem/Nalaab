@@ -1,0 +1,11 @@
+E:\My_Work\Nalaab\Nalaab.Utility\bin\Debug\netcoreapp3.1\Nalaab.Utility.deps.json
+E:\My_Work\Nalaab\Nalaab.Utility\bin\Debug\netcoreapp3.1\Nalaab.Utility.dll
+E:\My_Work\Nalaab\Nalaab.Utility\bin\Debug\netcoreapp3.1\Nalaab.Utility.pdb
+E:\My_Work\Nalaab\Nalaab.Utility\obj\Debug\netcoreapp3.1\Nalaab.Utility.AssemblyInfoInputs.cache
+E:\My_Work\Nalaab\Nalaab.Utility\obj\Debug\netcoreapp3.1\Nalaab.Utility.AssemblyInfo.cs
+E:\My_Work\Nalaab\Nalaab.Utility\obj\Debug\netcoreapp3.1\Nalaab.Utility.dll
+E:\My_Work\Nalaab\Nalaab.Utility\obj\Debug\netcoreapp3.1\Nalaab.Utility.pdb
+E:\My_Work\Nalaab\Nalaab.Utility\obj\Debug\netcoreapp3.1\Nalaab.Utility.csprojAssemblyReference.cache
+E:\My_Work\Nalaab\Nalaab.Utility\bin\Debug\netcoreapp3.1\Nalaab.Models.dll
+E:\My_Work\Nalaab\Nalaab.Utility\bin\Debug\netcoreapp3.1\Nalaab.Models.pdb
+E:\My_Work\Nalaab\Nalaab.Utility\obj\Debug\netcoreapp3.1\Nalaab.Utility.csproj.CopyComplete

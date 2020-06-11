@@ -1,0 +1,18 @@
+﻿@model int
+    <div class="container row">
+        <div class="col-12 text-center">
+            <h1 class="text-primary text-center">تم الطلب بنجاح</h1><br />
+            <img src="~/images/right-icon.png" width="150px" height="150px" />
+        </div>
+        <div class="col-12 text-center text-info">
+            <br />
+            شكرا لطلبك من نلعب <br />
+            لقد استلمنا طلبك بنجاح وسوف نوافيك بكل جديد عبر بريدك اللإلكتروني
+            <br />
+            رقم الطلب الخاص بك :  @Model
+        </div>
+        
+        <div class="col-12 text-center pt-3">
+            <a class="btn btn-outline-primary" asp-controller="Home" asp-action="Index">العودة للصفحة الرئيسية</a>
+        </div>
+        </div>

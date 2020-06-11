@@ -1,0 +1,8 @@
+E:\My_Work\Nalaab\Nalaab.Models\bin\Debug\netcoreapp3.1\Nalaab.Models.deps.json
+E:\My_Work\Nalaab\Nalaab.Models\bin\Debug\netcoreapp3.1\Nalaab.Models.dll
+E:\My_Work\Nalaab\Nalaab.Models\bin\Debug\netcoreapp3.1\Nalaab.Models.pdb
+E:\My_Work\Nalaab\Nalaab.Models\obj\Debug\netcoreapp3.1\Nalaab.Models.AssemblyInfoInputs.cache
+E:\My_Work\Nalaab\Nalaab.Models\obj\Debug\netcoreapp3.1\Nalaab.Models.AssemblyInfo.cs
+E:\My_Work\Nalaab\Nalaab.Models\obj\Debug\netcoreapp3.1\Nalaab.Models.dll
+E:\My_Work\Nalaab\Nalaab.Models\obj\Debug\netcoreapp3.1\Nalaab.Models.pdb
+E:\My_Work\Nalaab\Nalaab.Models\obj\Debug\netcoreapp3.1\Nalaab.Models.csprojAssemblyReference.cache

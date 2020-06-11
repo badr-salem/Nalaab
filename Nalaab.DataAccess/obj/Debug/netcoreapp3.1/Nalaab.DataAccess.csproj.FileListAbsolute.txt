@@ -1,0 +1,13 @@
+E:\My_Work\Nalaab\Nalaab.DataAccess\bin\Debug\netcoreapp3.1\Nalaab.DataAccess.deps.json
+E:\My_Work\Nalaab\Nalaab.DataAccess\bin\Debug\netcoreapp3.1\Nalaab.DataAccess.dll
+E:\My_Work\Nalaab\Nalaab.DataAccess\bin\Debug\netcoreapp3.1\Nalaab.DataAccess.pdb
+E:\My_Work\Nalaab\Nalaab.DataAccess\bin\Debug\netcoreapp3.1\Nalaab.Models.dll
+E:\My_Work\Nalaab\Nalaab.DataAccess\bin\Debug\netcoreapp3.1\Nalaab.Utility.dll
+E:\My_Work\Nalaab\Nalaab.DataAccess\bin\Debug\netcoreapp3.1\Nalaab.Models.pdb
+E:\My_Work\Nalaab\Nalaab.DataAccess\bin\Debug\netcoreapp3.1\Nalaab.Utility.pdb
+E:\My_Work\Nalaab\Nalaab.DataAccess\obj\Debug\netcoreapp3.1\Nalaab.DataAccess.csprojAssemblyReference.cache
+E:\My_Work\Nalaab\Nalaab.DataAccess\obj\Debug\netcoreapp3.1\Nalaab.DataAccess.AssemblyInfoInputs.cache
+E:\My_Work\Nalaab\Nalaab.DataAccess\obj\Debug\netcoreapp3.1\Nalaab.DataAccess.AssemblyInfo.cs
+E:\My_Work\Nalaab\Nalaab.DataAccess\obj\Debug\netcoreapp3.1\Nalaab.DataAccess.csproj.CopyComplete
+E:\My_Work\Nalaab\Nalaab.DataAccess\obj\Debug\netcoreapp3.1\Nalaab.DataAccess.dll
+E:\My_Work\Nalaab\Nalaab.DataAccess\obj\Debug\netcoreapp3.1\Nalaab.DataAccess.pdb
